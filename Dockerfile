@@ -241,7 +241,10 @@ RUN cd /usr/local/src && git clone https://github.com/vitruvianscience/opendeep.
     unzip h2o.zip && rm h2o.zip && cp h2o-*/h2o.jar . && \
     pip install `find . -name "*whl"` && \
     # Work around https://github.com/tensorflow/tensorflow/issues/16488
-    pip install numpy --upgrade
+    pip install numpy --upgrade && \
+    
+    #GluonCV
+    pip install gluoncv && \
 
     # Keras setup
     # Keras likes to add a config file in a custom directory when it's
